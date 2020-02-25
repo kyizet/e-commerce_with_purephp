@@ -13,3 +13,4 @@ This is an E-commerce website that sells anime-related products such as figures,
 # Languages Used
 * PHP
 * Materialize CSS
+* React
