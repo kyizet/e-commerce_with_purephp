@@ -3,40 +3,37 @@
 
 <head>
     <?php
+    session_start();
     include_once("includes/header.php");
-    include_once("database/connection.php");
+    include("database/connection.php");
     ?>
+
+    <style>
+        .no-scroll::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+            scrollbar-width: none;
+        }
+
+        input {
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body class="grey lighten-3">
+<body class="grey lighten-3" style="overflow-y: hidden">
     <?php
-    if ($connection) {
+    if (isset($_SESSION['username'])) {
         include_once("includes/navBar.php");
     ?>
-        <div class="container">
-            <br>
-            <a href="" class="black-text"><i class="tiny material-icons">add</i>Add Category</a>
-            <a href="" class="black-text"><i class="tiny material-icons">add</i>Edit Category</a>
-            <br /><br />
-            <div class="row">
-                <div class="col s12 z-depth-2 grey lighten-5" style="height: 100em">
-                    <?php 
-                        $result = mysqli_query($connection, "SHOW TABLES");
-                        while($table = mysqli_fetch_array($result)){
-                            ?>
-                            <i class="tiny material-icons"></i><a href=""><?php echo $table[0] ?></a>
-                            <?php
-                        }
-                    ?>
-                </div>
-            </div>
-        </div>
-
+        <div id="MainReact"></div>
     <?php } else {
-        include_once("account_control/login.php");
+        header("Location: http://localhost:8080/e-commerce_with_purephp/acom_cms_admin/login.php");
     }
     ?>
-
+    <?php
+    include("includes/react_includes.php");
+    ?>
 </body>
 
 </html>

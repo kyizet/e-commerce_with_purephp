@@ -1,0 +1,1 @@
+<script type="text/babel" src="react_apps/App.js"></script>

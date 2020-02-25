@@ -1,9 +1,15 @@
-<nav>
-    <div class="nav-wrapper black" style="padding-left: 5%;">
-        <a href="#" class="brand-logo offset-3">ACOM</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="">View Website</a></li>
-            <li><a><form><button class="btn grey lighten-5"><div class="black-text">Logout</div></button></form></a></li>
-        </ul>
-    </div>
-</nav>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper black fixed" style="padding-left: 5%;">
+            <a href="http://localhost:8080/e-commerce_with_purephp/acom_cms_admin/index.php" class="brand-logo offset-3"><img src="assets/acom-logo-white.png" alt="Invalid" width="50px" height="50px"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="../index.php">View Website</a></li>
+                <li>
+                        <form action="logout.php"><button class="btn grey lighten-5">
+                                <div class="black-text">Logout</div>
+                            </button></form>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</div>
