@@ -14,3 +14,11 @@ This is an E-commerce website that sells anime-related products such as figures,
 * PHP
 * Materialize CSS
 * React
+
+# Pre-requisites
+* Do change your Apache Server's port number to localhost 8080 (MAMP or XAMP)
+* Do chnage the DB_USER, DB_PASSWORD in connection.php
+* Create an admin account manually
+* If the table for Admin and Customer are not automatically generated, the column names can be found within addDatabase.php
+* To get the best result of the CMS system, all the tables MUST BE CREATED in small letters (Some are default-small)
+* Photos uploaded should be in PNG or some of the features will not work, plus the items will only need PNGs

@@ -1,4 +1,5 @@
 <?php
+//since data will be sent to the React Application in several cases, this will lessen the complexity and shorten the code in other files
 $sql = "SHOW TABLES";
 $result = mysqli_query($connection, $sql);
 echo "[";

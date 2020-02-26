@@ -1,5 +1,5 @@
 <?php
-$sql1 = "CREATE TABLE Admin(
+$sql1 = "CREATE TABLE admin(
             admin_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             admin_firstName VARCHAR(50) NOT NULL,
             admin_lastName VARCHAR(50) NOT NULL,
@@ -11,7 +11,7 @@ $sql1 = "CREATE TABLE Admin(
 
 mysqli_query($connection, $sql1);
 
-$sql2 = "CREATE TABLE Customer(
+$sql2 = "CREATE TABLE customer(
             customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             customer_firstName VARCHAR(50) NOT NULL,
             customer_lastName VARCHAR(50) NOT NULL,

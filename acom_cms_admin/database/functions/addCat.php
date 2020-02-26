@@ -2,6 +2,8 @@
 
 include("../connection.php");
 
+
+// Adding new category or table with predefined columns, this will restrict the admins from defining new unneccessary columns
 $newCatName = $_POST['newCatName'];
 $sql = "CREATE TABLE `$newCatName`(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

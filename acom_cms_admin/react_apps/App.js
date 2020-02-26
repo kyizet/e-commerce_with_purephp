@@ -25,6 +25,7 @@ class App extends React.Component {
       price: "",
       quantity: "",
       detail: "",
+      photo: "",
 
       prevName: ""
     };
@@ -68,6 +69,7 @@ class App extends React.Component {
     editedItem.append("quantity", this.state.quantity);
     editedItem.append("detail", this.state.detail);
     editedItem.append("category", this.state.selectedCat);
+    editedItem.append("photo", this.state.photo);
 
     editedItem.append("selectedItem", this.state.selectedItem);
 
@@ -77,14 +79,15 @@ class App extends React.Component {
         "/e-commerce_with_purephp/acom_cms_admin/database/functions/editItem.php",
       data: editedItem,
       config: { headers: { "Content-Type": "multipart/form-data" } }
-    }).then(response => response.data)
-    .then(data => {
-      this.setState({
-        ItemData: data 
-      })
     })
+      .then(response => response.data)
+      .then(data => {
+        this.setState({
+          ItemData: data
+        });
+      });
 
-    this.setState({isEditItem: false})
+    this.setState({ isEditItem: false });
   }
 
   handleDeleteCat() {
@@ -154,6 +157,7 @@ class App extends React.Component {
     formData.append("anime", this.state.anime);
     formData.append("price", this.state.price);
     formData.append("quantity", this.state.quantity);
+    formData.append("photo", this.state.photo);
     formData.append("detail", this.state.detail);
     formData.append("category", this.state.selectedCat);
 
@@ -316,12 +320,12 @@ class App extends React.Component {
             {this.state.isAddItem ? (
               <div
                 className="col s8 offset-s1 z-depth-2 grey lighten-5"
-                style={{ height: "55em" }}
+                style={{ height: "55em", overflowY: "scroll" }}
               >
                 <div className="container">
                   <h3>Add Item</h3>
                   <div className="divider"></div>
-                  <form className="col s12 con">
+                  <form className="col s12 con" encType="multipart/form-data">
                     <div className="input-field col s12">
                       <input
                         id="name"
@@ -364,6 +368,22 @@ class App extends React.Component {
                       />
                       <label htmlFor="quantity">Quantity</label>
                     </div>
+
+                    <div className="file-field input-field col s12">
+                      <div className="btn black white-text col s2">
+                        <span>File</span>
+                        <input
+                          type="file"
+                          onChange={e =>
+                            this.setState({ photo: e.target.files[0] })
+                          }
+                        />
+                      </div>
+                      <div className="file-path-wrapper">
+                        <input className="file-path validate" type="text" />
+                      </div>
+                    </div>
+
                     <div className="input-field col s12">
                       <textarea
                         id="detail"
@@ -376,7 +396,7 @@ class App extends React.Component {
                     </div>
                     <button
                       type="submit"
-                      className="btn black white-text col s3"
+                      className="btn black white-text offset-s4 col s3"
                       onClick={this.handleAddItem}
                     >
                       Add
@@ -413,7 +433,7 @@ class App extends React.Component {
                       <th>Anime</th>
                       <th>Price</th>
                       <th>Quantity</th>
-                      <th>Photo Name</th>
+                      <th>Photo Path</th>
                       <th>Detail</th>
                       <th style={{ width: "1%" }}>
                         <i
@@ -427,7 +447,7 @@ class App extends React.Component {
                     </tr>
                   </thead>
 
-                  {this.state.ItemData.map(item => (
+                  {this.state.ItemData.map((item, photopath) => (
                     <tbody key={item.id}>
                       <tr>
                         <td style={{ textTransform: "capitalize" }}>
@@ -505,12 +525,41 @@ class App extends React.Component {
                         <td>
                           {item.name === this.state.selectedItem ? (
                             this.state.isEditItem ? (
-                              <input type="text" className="col offset-s2 s8" />
+                              <div className="file-field input-field">
+                                <div className="btn black text-white">
+                                  <span>Choose</span>
+                                  <input type="file" 
+                                          onChange={(e) => this.setState({ photo: e.target.files[0]}) }
+                                          />
+                                </div>
+                                <div className="file-path-wrapper">
+                                  <input
+                                    className="file-path validate"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
                             ) : (
-                              item.photo
+                              <span>
+                                <img
+                                  src={`database/images/items/${item.photo}`}
+                                  alt="invalid"
+                                  width="60px"
+                                  height="60px"
+                                />
+                                <span>{item.photo}</span>
+                              </span>
                             )
                           ) : (
-                            item.photo
+                            <span>
+                              <img
+                                src={`database/images/items/${item.photo}`}
+                                alt="invalid"
+                                width="60px"
+                                height="60px"
+                              />
+                              <span>{item.photo}</span>
+                            </span>
                           )}
                         </td>
                         <td>
@@ -525,10 +574,10 @@ class App extends React.Component {
                                 className="col offset-s2 s8"
                               />
                             ) : (
-                              item.detail
+                              item.detail.substring(0, 20) + " . . . "
                             )
                           ) : (
-                            item.detail
+                            item.detail.substring(0, 20) + " . . . "
                           )}
                         </td>
                         <td>

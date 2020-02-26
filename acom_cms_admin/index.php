@@ -13,8 +13,12 @@
             width: 0px;
             background: transparent;
             scrollbar-width: none;
+            overflow: -moz-scrollbars-none;
         }
-
+        .validate{
+            text-align: left !important;
+        }
+        
         input {
             text-align: center;
         }
