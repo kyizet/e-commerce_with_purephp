@@ -1,7 +1,3 @@
-function ItemTable(props) {
-  return <div></div>;
-}
-
 class App extends React.Component {
   constructor() {
     super();
@@ -19,6 +15,7 @@ class App extends React.Component {
       isPageStart: true,
       isAddItem: false,
       isEditItem: false,
+      isEditCarousel: false,
 
       name: "",
       anime: "",
@@ -106,6 +103,7 @@ class App extends React.Component {
           category: data
         });
       });
+
   }
 
   handleAddCat() {
@@ -183,7 +181,7 @@ class App extends React.Component {
     this.setState({
       selectedCat: event.target.innerText,
       isAddItem: false,
-      isPageStart: false
+      isPageStart: false,
     });
 
     let sentCat = new FormData();
@@ -204,14 +202,11 @@ class App extends React.Component {
   }
 
   render() {
-    const ItemList = this.state.ItemData.map(item => (
-      <ItemTable key={item.id} item={item} />
-    ));
-
     return (
       <React.Fragment>
         <div style={{ marginTop: "2%" }}>
           <div className="row">
+           {/* LEFT SIDE NAV */}
             <div
               className="col s2 z-depth-2 grey lighten-5 no-scroll"
               style={{ height: "55em", overflowY: "scroll" }}
@@ -230,11 +225,16 @@ class App extends React.Component {
                   href="#!"
                   className="collection-item  black-text"
                   onClick={() => {
+                    if(this.state.addNewCat == true){
+                      this.setState({
+                        addNewCat: false,
+                      })
+                    } else {
                     this.setState({
                       addNewCat: true,
                       deleteCat: false
                     });
-                  }}
+                  }}}
                 >
                   Add Category
                 </a>
@@ -242,11 +242,16 @@ class App extends React.Component {
                   href="#!"
                   className="collection-item  black-text"
                   onClick={() => {
+                    if(this.state.deleteCat == true){
+                      this.setState({
+                        deleteCat: false,
+                      })
+                    } else {
                     this.setState({
                       deleteCat: true,
                       addNewCat: false
                     });
-                  }}
+                  }}}
                 >
                   Delete Category
                 </a>
@@ -287,6 +292,7 @@ class App extends React.Component {
                   ""
                 )}
               </div>
+
               <div className="divider"></div>
               <div className="subheader grey-text center">Categories‌‌</div>
               <div className="collection">
@@ -317,6 +323,9 @@ class App extends React.Component {
                 )}
               </div>
             </div>
+
+             {/* Middle MAIN */}
+
             {this.state.isAddItem ? (
               <div
                 className="col s8 offset-s1 z-depth-2 grey lighten-5"
@@ -333,6 +342,7 @@ class App extends React.Component {
                         className="validate"
                         value={this.state.name}
                         onChange={e => this.setState({ name: e.target.value })}
+                        required="true"
                       />
                       <label htmlFor="name">Name</label>
                     </div>
@@ -396,11 +406,18 @@ class App extends React.Component {
                     </div>
                     <button
                       type="submit"
-                      className="btn black white-text offset-s4 col s3"
-                      onClick={this.handleAddItem}
+                      className="btn black white-text offset-s2 col s3"
+                      onClick={() => {this.handleAddItem()
+                      this.setState({
+                        name:"",
+                        price:"",
+                        anime:"",
+                        quantity:"",
+                      })}}
                     >
                       Add
                     </button>
+                    <a className="btn black white-text offset-s1 col s3" onClick={e => this.setState({isAddItem: false})}>Back</a>
                   </form>
                 </div>
               </div>
@@ -542,7 +559,7 @@ class App extends React.Component {
                             ) : (
                               <span>
                                 <img
-                                  src={`database/images/items/${item.photo}`}
+                                  src={`/e-commerce_with_purephp/acom_cms_admin/database/images/items/${item.photo}`}
                                   alt="invalid"
                                   width="60px"
                                   height="60px"
@@ -553,7 +570,7 @@ class App extends React.Component {
                           ) : (
                             <span>
                               <img
-                                src={`database/images/items/${item.photo}`}
+                                src={`/e-commerce_with_purephp/acom_cms_admin/database/images/items/${item.photo}`}
                                 alt="invalid"
                                 width="60px"
                                 height="60px"
