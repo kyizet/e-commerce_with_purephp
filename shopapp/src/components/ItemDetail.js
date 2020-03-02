@@ -3,12 +3,6 @@ import React, { Fragment } from "react";
 function ItemDetail(props) {
   return (
     <Fragment>
-      <p>{props.location.itemProps.name}</p>
-      <p>{props.location.itemProps.anime}</p>
-      <p>{props.location.itemProps.price}</p>
-      <p>{props.location.itemProps.quantity}</p>
-      <p>{props.location.itemProps.detail}</p>
-      <p>{props.location.itemProps.photo}</p>
       <div class="container my-5 py-5 z-depth-1">
         <section class="text-center">
           <h3 class="font-weight-bold mb-5">Product Details</h3>
@@ -26,97 +20,36 @@ function ItemDetail(props) {
                 >
                   <div class="carousel-item active">
                     <img
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/1.jpg"
-                      alt="First slide"
+                      src={`/e-commerce_with_purephp/acom_cms_admin/database/images/items/${props.location.itemProps.photo}`}
+                      alt="Invalid"
                       class="img-fluid"
                     />
                   </div>
                 </div>
-                <a
-                  class="carousel-control-prev"
-                  href="#carousel-thumb1"
-                  role="button"
-                  data-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a
-                  class="carousel-control-next"
-                  href="#carousel-thumb1"
-                  role="button"
-                  data-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="sr-only">Next</span>
-                </a>
               </div>
 
-              <div class="row mb-4">
-                <div class="col-md-12">
-                  <div id="mdb-lightbox-ui"></div>
-                  <div class="mdb-lightbox no-margin">
-                    <figure class="col-md-4">
-                      <a
-                        href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/20.jpg"
-                        data-size="1600x1067"
-                      >
-                        <img
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/20.jpg"
-                          class="img-fluid"
-                        />
-                      </a>
-                    </figure>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div class="col-lg-5 text-center text-md-left">
               <h2 class="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">
-                iPad PRO
+                {props.location.itemProps.name}
               </h2>
-              <span class="badge badge-danger product mb-4 ml-xl-0 ml-4">
-                bestseller
-              </span>
-              <span class="badge badge-success product mb-4 ml-2">SALE</span>
 
               <h3 class="h3-responsive text-center text-md-left mb-5 ml-xl-0 ml-4">
                 <span class="red-text font-weight-bold">
-                  <strong>$1449</strong>
-                </span>
-                <span class="grey-text">
-                  <small>
-                    <s>$1789</s>
-                  </small>
+                  <strong>${props.location.itemProps.price}</strong>
                 </span>
               </h3>
 
               <div class="font-weight-normal">
-                <p class="ml-xl-0 ml-4">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Sapiente nesciunt atque nemo neque ut officiis nostrum
-                  incidunt maiores, magni optio et sunt suscipit iusto nisi
-                  totam quis, nobis mollitia necessitatibus.
+                <p class="ml-xl-0 ml-4">{props.location.itemProps.detail}
                 </p>
 
                 <p class="ml-xl-0 ml-4">
-                  <strong>Storage: </strong>64GB
+                  <strong>Stock: </strong>{props.location.itemProps.quantity}
                 </p>
                 <p class="ml-xl-0 ml-4">
-                  <strong>Size: </strong>9.6-inch
-                </p>
-                <p class="ml-xl-0 ml-4">
-                  <strong>Resolution: </strong>2048 x 1536
-                </p>
-                <p class="ml-xl-0 ml-4">
-                  <strong>Availability: </strong>In stock
+                  <strong>Anime: </strong>{props.location.itemProps.anime}
                 </p>
 
                 <div class="mt-5">

@@ -99,7 +99,7 @@ function App() {
                     className="card-img-top"
                     alt="Invalid"
                     width="80px"
-                    height="150px"
+                    height="200px"
                   />
                   <a>
                     <div className="mask rgba-white-slight"> </div>
