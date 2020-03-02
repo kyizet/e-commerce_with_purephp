@@ -10,10 +10,11 @@
 # About
 This is an E-commerce website that sells anime-related products such as figures, mugs, clothes. This is entirely written in PHP without the use of any frameworks or CMS because we are not allowed to due to the restriction made by lecturer.
 
-# Languages Used
+# Languages and Frameworks Used
 * PHP
-* Materialize CSS
 * React
+* Materialize CSS for CMS
+* MDBootstrap for the website
 
 # Pre-requisites
 * Do change your Apache Server's port number to localhost 8080 (MAMP or XAMP)
