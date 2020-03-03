@@ -12,7 +12,7 @@
 <style>
         @media (min-width: 576px) {
             body{
-                padding-top: 100%;
+                padding-top: 8%;
             }
 
         }
@@ -25,13 +25,18 @@
         }
         @media (min-width: 992px) {
             body{
-                padding-top: 6%;
+                padding-top: 5%;
             }
         }
 
         @media (min-width: 1200px) {
             body {
                 padding-top: 1%;
+            }
+
+            .navbar{
+                padding-left: 20% !important;
+                padding-right: 20% !important;
             }
         }
     </style>

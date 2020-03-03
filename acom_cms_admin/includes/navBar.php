@@ -5,7 +5,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/e-commerce_with_purephp/index.php">View Website</a></li>
                 <li>
-                        <form action="internal_pages/logout.php"><button class="btn grey lighten-5">
+                        <form action="/e-commerce_with_purephp/acom_cms_admin/internal_pages/logout.php"><button class="btn grey lighten-5">
                                 <div class="black-text">Logout</div>
                             </button></form>
                     </li>

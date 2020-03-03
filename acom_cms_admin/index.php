@@ -40,10 +40,19 @@
 
 <body class="grey lighten-3" style="overflow: hidden">
     <?php
-    include("includes/navBar.php");
+    session_start();
+    if (isset($_SESSION['username'])) {
+        include("includes/navBar.php");
     ?>
-    <div id="app">
-    </div>
+        <div id="app">
+        </div>
+
+    <?php } else {
+
+        header("Location: http://localhost:8080/e-commerce_with_purephp/acom_cms_admin/internal_pages/login.php");
+    }
+
+    ?>
 
     <script src="reactapp/dist/main.bundle.js"></script>
 
