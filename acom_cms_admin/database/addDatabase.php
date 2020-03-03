@@ -15,6 +15,7 @@ $sql2 = "CREATE TABLE customer(
             customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             customer_firstName VARCHAR(50) NOT NULL,
             customer_lastName VARCHAR(50) NOT NULL,
+            customer_email VARCHAR(100) NOT NULL,
             customer_dob DATE NOT NULL,
             customer_address VARCHAR(255),
             customer_phone VARCHAR(20),
