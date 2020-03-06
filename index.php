@@ -3,7 +3,7 @@
 
 <head>
 
-    
+
     <?php
     include("includes/header.php");
     ?>
@@ -24,28 +24,70 @@
 
     <main style="overflow-x: hidden">
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+        <!--Carousel Wrapper-->
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg">
+                    <div class="view">
+                        <img class="d-block w-100" src="/e-commerce_with_purephp/assets/images/carousel/carousel2.jpg" alt="First slide">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Anime-related products</h3>
+                        <p>Sold by weebs</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(33).jpg">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="/e-commerce_with_purephp/assets/images/carousel/carousel1.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Best products</h3>
+                        <p>Quality guaranteed</p>
+                        <div class="mask rgba-black-light"></div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="/e-commerce_with_purephp/assets/images/carousel/carousel3.png" alt="Third slide">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Trust us</h3>
+                        <p>Because we are trustworthy</p>
+                    </div>
                 </div>
             </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
         </div>
+        <!--/.Carousel Wrapper-->
         <!-- Section: Products v.4 -->
         <section class="text-center my-5 container">
 
             <!-- Section heading -->
-            <h2 class="h1-responsive font-weight-bold text-center my-5">Our bestsellers</h2>
+            <h2 class="h1-responsive font-weight-bold text-center my-5">What we majorly sell</h2>
             <!-- Section description -->
-            <p class="grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas
-                nostrum quisquam eum porro a pariatur veniam.</p>
+            <p class="grey-text text-center w-responsive mx-auto mb-5">Are you a collector? Are you an enthusiast? Browse to satisfy your needs!</p>
 
             <!-- Grid row -->
             <div class="row">
@@ -56,10 +98,10 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/5.jpg" class="img-fluid" alt="">
+                            <img src="/e-commerce_with_purephp/assets/images/others/chibis.jpg" class="img-fluid" alt="">
                             <div class="stripe dark">
-                                <a>
-                                    <p>Red trousers
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
+                                    <p>Chibis
                                         <i class="fas fa-angle-right"></i>
                                     </p>
                                 </a>
@@ -77,10 +119,10 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" class="img-fluid" alt="">
+                            <img src="/e-commerce_with_purephp/assets/images/others/clothes_anime.jpg" class="img-fluid" alt="">
                             <div class="stripe light">
-                                <a>
-                                    <p>Sweatshirt
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
+                                    <p>Clothes
                                         <i class="fas fa-angle-right"></i>
                                     </p>
                                 </a>
@@ -98,10 +140,10 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/9.jpg" class="img-fluid" alt="">
+                            <img src="/e-commerce_with_purephp/assets/images/others/figures_anime.jpg" class="img-fluid" alt="">
                             <div class="stripe dark">
-                                <a>
-                                    <p>Accessories
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
+                                    <p>Figures
                                         <i class="fas fa-angle-right"></i>
                                     </p>
                                 </a>
@@ -119,10 +161,10 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/7.jpg" class="img-fluid" alt="">
+                            <img src="/e-commerce_with_purephp/assets/images/others/keychains.jpg" class="img-fluid" alt="">
                             <div class="stripe light">
-                                <a>
-                                    <p>Sweatshirt
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
+                                    <p>Keychains
                                         <i class="fas fa-angle-right"></i>
                                     </p>
                                 </a>

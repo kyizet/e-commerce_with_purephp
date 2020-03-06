@@ -19,6 +19,7 @@ This is an E-commerce website that sells anime-related products such as figures,
 # Pre-requisites
 * Do change your Apache Server's port number to localhost 8080 (MAMP or XAMP)
 * Do change the DB_USER, DB_PASSWORD in connection.php
+* The root folder's name should be "/e-commerce_with_purephp"
 * Create an admin account manually
 * If the table for Admin and Customer are not automatically generated, the column names can be found within addDatabase.php
 * To get the best result of the CMS system, all the tables MUST BE CREATED in small letters (Some are default-small)

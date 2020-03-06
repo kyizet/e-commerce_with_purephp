@@ -13,13 +13,14 @@ mysqli_query($connection, $sql1);
 
 $sql2 = "CREATE TABLE customer(
             customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            customer_firstName VARCHAR(50) NOT NULL,
-            customer_lastName VARCHAR(50) NOT NULL,
-            customer_email VARCHAR(100) NOT NULL,
-            customer_dob DATE NOT NULL,
+            customer_firstName VARCHAR(50),
+            customer_lastName VARCHAR(50),
+            customer_username VARCHAR(50) NOT NULL,
+            customer_email VARCHAR(100),
+            customer_password VARCHAR(50) NOT NULL,
             customer_address VARCHAR(255),
             customer_phone VARCHAR(20),
-            customer_imagePath VARCHAR(255)
+            customer_photo VARCHAR(255)
             );";
 mysqli_query($connection, $sql2);
 
