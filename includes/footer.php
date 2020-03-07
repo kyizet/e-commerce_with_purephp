@@ -25,33 +25,11 @@
       <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
         <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold">Company name</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-        <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Products</h6>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <a href="#!">MDBootstrap</a>
-        </p>
-        <p>
-          <a href="#!">MDWordPress</a>
-        </p>
-        <p>
-          <a href="#!">BrandFlow</a>
-        </p>
-        <p>
-          <a href="#!">Bootstrap Angular</a>
-        </p>
+        <h6 class="text-uppercase font-weight-bold">ACOM - Anime Ecommerce</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width:250px;">
+        <p>The company is co-founed by two anime enthusiasts. The company runs on products traded from various parts of the world. 
+        Since we are the collectors ourselves, we do know the quality of the products we imports to certain extent which makes the customers to easily 
+        trust us.</p>
 
       </div>
       <!-- Grid column -->
@@ -60,13 +38,13 @@
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
         <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <h6 class="text-uppercase font-weight-bold">Quick links</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="#!">Your Account</a>
+          <a href="#!">Invest in us</a>
         </p>
         <p>
-          <a href="#!">Become an Affiliate</a>
+          <a href="#!">Apply for a job now!</a>
         </p>
         <p>
           <a href="#!">Shipping Rates</a>
@@ -85,13 +63,13 @@
         <h6 class="text-uppercase font-weight-bold">Contact</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <i class="fas fa-home mr-3"></i> Myanmar Institute of Theoloy, Seminary Hills, Insein, Yangon, Myanmar</p>
         <p>
-          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <i class="fas fa-envelope mr-3"></i> acom@business.com</p>
         <p>
-          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <i class="fas fa-phone mr-3"></i> + 09 976373747</p>
         <p>
-          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          <i class="fas fa-print mr-3"></i> + 09 420027180</p>
 
       </div>
       <!-- Grid column -->
@@ -139,7 +117,7 @@
 <!-- Footer Elements -->
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    <a href="https://mdbootstrap.com/"> acom.com</a>
   </div>
   <!-- Copyright -->
 

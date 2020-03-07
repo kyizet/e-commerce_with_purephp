@@ -98,14 +98,14 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
                             <img src="/e-commerce_with_purephp/assets/images/others/chibis.jpg" class="img-fluid" alt="">
                             <div class="stripe dark">
-                                <a href="/e-commerce_with_purephp/pages/shop.php">
-                                    <p>Chibis
+                                    <p class="black-text">Chibis
                                         <i class="fas fa-angle-right"></i>
                                     </p>
-                                </a>
                             </div>
+                                </a>
                         </div>
                         <!-- Card image -->
                     </div>
@@ -119,14 +119,14 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
                             <img src="/e-commerce_with_purephp/assets/images/others/clothes_anime.jpg" class="img-fluid" alt="">
                             <div class="stripe light">
-                                <a href="/e-commerce_with_purephp/pages/shop.php">
-                                    <p>Clothes
+                                    <p class="black-text">Clothes
                                         <i class="fas fa-angle-right"></i>
                                     </p>
-                                </a>
                             </div>
+                                </a>
                         </div>
                         <!-- Card image -->
                     </div>
@@ -140,14 +140,14 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
                             <img src="/e-commerce_with_purephp/assets/images/others/figures_anime.jpg" class="img-fluid" alt="">
                             <div class="stripe dark">
-                                <a href="/e-commerce_with_purephp/pages/shop.php">
-                                    <p>Figures
+                                    <p class="black-text">Figures
                                         <i class="fas fa-angle-right"></i>
                                     </p>
-                                </a>
                             </div>
+                                </a>
                         </div>
                         <!-- Card image -->
                     </div>
@@ -161,14 +161,14 @@
                     <div class="card collection-card z-depth-1-half">
                         <!-- Card image -->
                         <div class="view zoom">
+                                <a href="/e-commerce_with_purephp/pages/shop.php">
                             <img src="/e-commerce_with_purephp/assets/images/others/keychains.jpg" class="img-fluid" alt="">
                             <div class="stripe light">
-                                <a href="/e-commerce_with_purephp/pages/shop.php">
-                                    <p>Keychains
+                                    <p class="black-text">Keychains
                                         <i class="fas fa-angle-right"></i>
                                     </p>
-                                </a>
                             </div>
+                                </a>
                         </div>
                         <!-- Card image -->
                     </div>
@@ -192,18 +192,18 @@
 
                 <h3 class="font-weight-bold text-center dark-grey-text pb-2">A Few Easy Steps</h3>
                 <hr class="w-header my-4">
-                <p class="lead text-center text-muted pt-2 pb-3 mb-5">We are so proud of our product. It's really easy to create a landing page for your product.</p>
+                <p class="lead text-center text-muted pt-2 pb-3 mb-5">In six simple steps, the item of your choice will be delivered to you.</p>
 
                 <div class="row dark-grey-text">
 
                     <div class="col-md-6 col-xl-4 mb-4">
                         <div class="media">
                             <div class="mr-4">
-                                <span class="text-primary"><i class="icon-fa fas fa-file-alt fa-2x"></i></span>
+                                <span class="black-text"><i class="icon-fa fas fa-dice-one fa-2x"></i></span>
                             </div>
                             <div class="media-body">
                                 <h6 class="font-weight-bold">Step One</h6>
-                                <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque ipsa doloremque laudantium.</p>
+                                <p class="text-muted">Register your account or Login if you have already registered.</p>
                             </div>
                         </div>
                     </div>
@@ -211,11 +211,11 @@
                     <div class="col-md-6 col-xl-4 mb-4">
                         <div class="media">
                             <div class="mr-4">
-                                <span class="text-danger"><i class="icon-fa fas fa-bullhorn fa-2x"></i></span>
+                                <span class="black-text"><i class="icon-fa fas fa-dice-two fa-2x"></i></span>
                             </div>
                             <div class="media-body">
                                 <h6 class="font-weight-bold">Step Two</h6>
-                                <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque ipsa doloremque laudantium.</p>
+                                <p class="text-muted">Make sure that your information about your address and phone numbers are up to date so that we can deliver our products precisely. </p>
                             </div>
                         </div>
                     </div>
@@ -223,11 +223,11 @@
                     <div class="col-md-6 col-xl-4 mb-4">
                         <div class="media">
                             <div class="mr-4">
-                                <span class="text-info"><i class="icon-fa fas fa-code fa-2x"></i></span>
+                                <span class="black-text"><i class="icon-fa fas fa-dice-three fa-2x"></i></span>
                             </div>
                             <div class="media-body">
                                 <h6 class="font-weight-bold">Step Three</h6>
-                                <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque ipsa doloremque laudantium.</p>
+                                <p class="black-text">Visit the shop and browse the items, everything will fulfill your needs.</p>
                             </div>
                         </div>
                     </div>
@@ -235,11 +235,11 @@
                     <div class="col-md-6 col-xl-4 mb-4">
                         <div class="media">
                             <div class="mr-4">
-                                <span class="text-warning"><i class="icon-fa fas fa-comments fa-2x"></i></span>
+                                <span class="black-text"><i class="icon-fa fas fa-dice-four fa-2x"></i></span>
                             </div>
                             <div class="media-body">
                                 <h6 class="font-weight-bold">Step Four</h6>
-                                <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque ipsa doloremque laudantium.</p>
+                                <p class="text-muted">Add the items that you like to the shopping cart. Hands free!</p>
                             </div>
                         </div>
                     </div>
@@ -247,11 +247,11 @@
                     <div class="col-md-6 col-xl-4 mb-4">
                         <div class="media">
                             <div class="mr-4">
-                                <span class="text-muted"><i class="icon-fa fas fa-cogs fa-2x"></i></span>
+                                <span class="black-text"><i class="icon-fa fas fa-dice-five fa-2x"></i></span>
                             </div>
                             <div class="media-body">
                                 <h6 class="font-weight-bold">Step Five</h6>
-                                <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque ipsa doloremque laudantium.</p>
+                                <p class="text-muted">If you have picked all of your items, you can proceed to checkout.</p>
                             </div>
                         </div>
                     </div>
@@ -259,11 +259,11 @@
                     <div class="col-md-6 col-xl-4 mb-4">
                         <div class="media">
                             <div class="mr-4">
-                                <span class="text-success"><i class="icon-fa far fa-handshake fa-2x"></i></span>
+                                <span class="black-text"><i class="icon-fa far fa-dice-six fa-2x"></i></span>
                             </div>
                             <div class="media-body">
                                 <h6 class="font-weight-bold">Step Six</h6>
-                                <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium eaque ipsa doloremque laudantium.</p>
+                                <p class="text-muted">Choose the payment method and grab the popcorn, the item will be delieverd to you soon.</p>
                             </div>
                         </div>
                     </div>
@@ -281,15 +281,11 @@
             <section class="p-md-3 mx-md-5">
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-md-6 mb-4">
-                        <h2 class="font-weight-bold mb-3">Features</h2>
+                        <h2 class="font-weight-bold mb-3">Believe us, trust us!</h2>
                         <p class="text-muted pt-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            We are the official trading company based in Myanmar where 
+                            we will have our variety of anime-related products of figures, mugs, clothes, keychains, chibis and 
+                            much more. 
                         </p>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-md-0 mb-5">
@@ -299,34 +295,37 @@
                 <div class="row pt-3">
                     <div class="col-lg-3 col-md-6 mb-5">
                         <h4 class="font-weight-bold mb-3">
-                            <i class="far fa-paper-plane indigo-text pr-2"></i> Feature 1
+                            <i class="far fa-paper-plane indigo-text pr-2"></i> Be informed
                         </h4>
                         <p class="text-muted mb-lg-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Information is priceless. With our technology, you will always be informed about the products you buy. 
+                            No more blind purchases.
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5">
                         <h4 class="font-weight-bold mb-3">
-                            <i class="fas fa-pen-alt green-text pr-2"></i> Feature 2
+                            <i class="fas fa-pen-alt green-text pr-2"></i> Records
                         </h4>
                         <p class="text-muted mb-lg-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Once you have used our services, you are recorded, 
+                            you will always have the chance to participate in lucky draws and in amazing programs.
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5">
                         <h4 class="font-weight-bold mb-3">
-                            <i class="fas fa-user amber-text pr-2"></i> Feature 3
+                            <i class="fas fa-user amber-text pr-2"></i> We respect our customer
                         </h4>
                         <p class="text-muted mb-md-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            It doesn't matter if our customer have contributed a penny or a dollar to our company, you will never
+                            feel ignored or neglected. Enjoy our services.
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5">
                         <h4 class="font-weight-bold mb-3">
-                            <i class="fas fa-rocket red-text pr-2"></i> Feature 4
+                            <i class="fas fa-rocket red-text pr-2"></i> Fast Delivery
                         </h4>
                         <p class="text-muted mb-md-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        No matter where you live or when you order, the delivery time will only take from 1-3 both business or non-business days. 
                         </p>
                     </div>
                 </div>
@@ -347,9 +346,7 @@
                     <!-- Section heading -->
                     <h3 class="font-weight-bold mb-4 pb-2">Testimonials</h3>
                     <!-- Section description -->
-                    <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
-                        eum porro a pariatur veniam.</p>
+                    <p class="text-center w-responsive mx-auto mb-5">Testimonials from our top customers.</p>
 
                     <!--Grid row-->
                     <div class="row text-center">
@@ -360,7 +357,7 @@
                             <div class="testimonial">
                                 <!--Avatar-->
                                 <div class="avatar mx-auto">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(1).jpg" class="rounded-circle z-depth-1 img-fluid">
+                                    <img src="/e-commerce_with_purephp/assets/images/testimonies/paul.jpg" class="rounded-circle z-depth-1" width="250px" height="250px">
                                 </div>
                                 <!--Content-->
                                 <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
@@ -369,13 +366,6 @@
                                     <i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
                                     eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
                                 <!--Review-->
-                                <div class="orange-text">
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star-half-alt"> </i>
-                                </div>
                             </div>
 
                         </div>
@@ -387,7 +377,7 @@
                             <div class="testimonial">
                                 <!--Avatar-->
                                 <div class="avatar mx-auto">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" class="rounded-circle z-depth-1 img-fluid">
+                                    <img src="/e-commerce_with_purephp/assets/images/testimonies/hlm.jpg" class="rounded-circle z-depth-1" width="250px" height="250px">
                                 </div>
                                 <!--Content-->
                                 <h4 class="font-weight-bold dark-grey-text mt-4">John Doe</h4>
@@ -396,13 +386,6 @@
                                     <i class="fas fa-quote-left pr-2"></i>Ut enim ad minima veniam, quis nostrum exercitationem ullam
                                     corporis suscipit laboriosam, nisi ut aliquid commodi.</p>
                                 <!--Review-->
-                                <div class="orange-text">
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                </div>
                             </div>
 
                         </div>
@@ -414,21 +397,14 @@
                             <div class="testimonial">
                                 <!--Avatar-->
                                 <div class="avatar mx-auto">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle z-depth-1 img-fluid">
+                                    <img src="/e-commerce_with_purephp/assets/images/testimonies/atta.jpg" class="rounded-circle z-depth-1" width="250px" height="250px">
                                 </div>
                                 <!--Content-->
-                                <h4 class="font-weight-bold dark-grey-text mt-4">ဒေါ်တင်မြင့်</h4>
-                                <h6 class="font-weight-bold blue-text my-3">ငပိချက်ရောင်းသူ</h6>
+                                <h4 class="font-weight-bold dark-grey-text mt-4">ဒေါ်ပူဟောင်း</h4>
+                                <h6 class="font-weight-bold blue-text my-3">အပျိုကြီး</h6>
                                 <p class="font-weight-normal dark-grey-text">
-                                    <i class="fas fa-quote-left pr-2"></i>ဆရာကြီးပဲဟေ့ ၅ စတား ၅ စတား ငပိချက်လည်းအားပေးပါဦး</p>
+                                    <i class="fas fa-quote-left pr-2"></i>အရုပ်လေးတွေအရမ်းလှပြီး Quality ကောင်းပါတယ် သူငယ်လေးတွေလိုပေါ့ အဟိ</p>
                                 <!--Review-->
-                                <div class="orange-text">
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                    <i class="fas fa-star"> </i>
-                                </div>
                             </div>
 
                         </div>

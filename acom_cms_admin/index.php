@@ -41,7 +41,7 @@
 <body class="grey lighten-3" style="overflow: hidden">
     <?php
     session_start();
-    if (isset($_SESSION['username'])) {
+    if (isset($_SESSION['admin_username'])) {
         include("includes/navBar.php");
     ?>
         <div id="app">

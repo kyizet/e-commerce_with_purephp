@@ -37,7 +37,7 @@
             $result = mysqli_query($connection, $sql);
             while ($data = mysqli_fetch_assoc($result)) {
                 if ($data['admin_username'] == $_POST['username'] && $data['admin_password'] == $_POST['password']) {
-                    $_SESSION['username'] = $_POST['username'];
+                    $_SESSION['admin_username'] = $_POST['username'];
                     header("Location: http://localhost:8080/e-commerce_with_purephp/acom_cms_admin/index.php");
                 }
             }

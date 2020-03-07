@@ -1,6 +1,8 @@
 <?php
-    include('../../acom_cms_admin/database/connection.php');
-    session_start();
+
+$root = $_SERVER['DOCUMENT_ROOT'];
+include($root . "/e-commerce_with_purephp/acom_cms_admin/database/connection.php");
+session_start();
     
     if(empty($_POST['username']) || empty($_POST['password'])){
         $_SESSION['error'] = "Username and password cannot be empty";

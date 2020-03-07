@@ -8,7 +8,6 @@ $sql1 = "CREATE TABLE admin(
             admin_email VARCHAR(255) NOT NULL,
             reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     );";
-
 mysqli_query($connection, $sql1);
 
 $sql2 = "CREATE TABLE customer(
