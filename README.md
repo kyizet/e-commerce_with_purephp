@@ -23,3 +23,5 @@ This is an E-commerce website that sells anime-related products such as figures,
 * Create an admin account manually
 * If the table for Admin and Customer are not automatically generated, the column names can be found within addDatabase.php
 * Photos uploaded should be in PNG or some of the features will not work, plus the items will work better with PNGs
+* The basic database has been integrated in sqladd.sql, import it in the database.
+* From terminal, run "npm install" from /e-commerce_with_purephp/acom_cms_admin/reactapp/ and /e-commerce_with_purephp/shopapp/

@@ -91,7 +91,7 @@ function ItemDetail(props) {
                   <div class="row mt-3 mb-4">
                     <div class="col-md-12 text-center text-md-left text-md-right">
                       <button
-                        class="btn btn-primary btn-rounded"
+                        class="btn btn-outline-black btn-rounded"
                         onClick={addToCart}
                         data-toggle="modal"
                         data-target="#centralModalSm"
