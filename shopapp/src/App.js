@@ -1,13 +1,17 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Pagination from "./components/Pagination";
 
 function App() {
   const [items, setItems] = useState([]);
   const [categoryList, setCategoryList] = useState([]);
   const [category, setCategory] = useState(["All"]);
+  const [cart, setCart] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const [search, setSearch] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);
@@ -49,6 +53,21 @@ function App() {
     setItems(response.data);
   };
 
+  const fetchCartItems = async () => {
+    const response = await axios.get(
+      "/e-commerce_with_purephp/includes/shoppingCart.php"
+    );
+    const cartItems = response.data;
+    let i = 1;
+    let total = 0;
+    cartItems.forEach(e => {
+      e["id"] = i;
+      i += 1;
+      total += +e["price"];
+    });
+    setCart(cartItems);
+    setTotalPrice(total);
+  };
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -79,67 +98,85 @@ function App() {
           </div>
 
           <div className="col-md-3"></div>
-
-          <div className="col-md-6">
+          <div className="col-md-1">
+            <i
+              class="fas fa-shopping-cart fa-2x black-text"
+              style={{ cursor: "pointer" }}
+              data-toggle="modal"
+              data-target="#modalCart"
+              onClick={fetchCartItems}
+            ></i>
+          </div>
+          <div className="col-md-1">
+            <Link to="/e-commerce_with_purephp/pages/checkout">
+              <i class="fas fa-clipboard-list fa-2x black-text"></i>
+            </Link>
+          </div>
+          <div className="col-md-4">
             <input
-              className="form-control"
+              class="form-control"
+              id="listSearch"
               type="text"
-              placeholder="Search"
-              aria-label="Search"
+              placeholder="Search by item name"
+              onChange={e => setSearch(e.target.value)}
             />
           </div>
         </div>
         <div className="row">
-          {currentItems.map(item => (
-            <div className="col-lg-3 col-md-6 mb-lg-0 mb-4 my-5">
-              <div className="card align-items-center">
-                <div className="view overlay my-3">
-                  <img
-                    src={`/e-commerce_with_purephp/acom_cms_admin/database/images/items/${item.photo}`}
-                    className="card-img-top"
-                    alt="Invalid"
-                    width="80px"
-                    height="200px"
-                  />
-                  <a>
-                    <div className="mask rgba-white-slight"> </div>
-                  </a>
-                </div>
-                <div className="card-body text-center">
-                  <h5>
-                    <strong>
-                        <h5>
-                        Stock: {item.quantity}</h5>
-                    </strong>
-                  </h5>
-                  <h6 className="font-weight-bold black-text">
-                    <strong> Price: {item.price} $ </strong>
-                  </h6>
-                  <Link
-                    to={{
-                      pathname: `/e-commerce_with_purephp/pages/shop.php?${item.id}`,
-                      itemProps: {
-                        id: item.id,
-                        name: item.name,
-                        anime: item.anime,
-                        price: item.price,
-                        quantity: item.quantity,
-                        detail: item.detail,
-                        photo: item.photo
-                      }
-                    }}
-                  >
-                  <button
-                    type="button"
-                    class="btn btn-outline-info waves-effect"
-                  >
-                    Info
-                  </button>
-                  </Link>
+          {currentItems.map(item =>
+            search !== "" &&
+            item.name.toLowerCase().indexOf(search.toLowerCase()) ===
+              -1 ? null : (
+              <div className="col-lg-3 col-md-6 mb-lg-0 mb-4 my-5">
+                <div className="card align-items-center">
+                  <div className="view overlay my-3">
+                    <img
+                      src={`/e-commerce_with_purephp/acom_cms_admin/database/images/items/${item.photo}`}
+                      className="card-img-top"
+                      alt="Invalid"
+                      width="80px"
+                      height="200px"
+                    />
+                    <a>
+                      <div className="mask rgba-white-slight"> </div>
+                    </a>
+                  </div>
+                  <div className="card-body text-center">
+                    <h5>
+                      <strong>
+                        <h5>Stock: {item.quantity}</h5>
+                      </strong>
+                    </h5>
+                    <h6 className="font-weight-bold black-text">
+                      <strong> Price: {item.price} $ </strong>
+                    </h6>
+                    <Link
+                      to={{
+                        pathname: `/e-commerce_with_purephp/pages/shop.php?${item.id}`,
+                        itemProps: {
+                          id: item.id,
+                          name: item.name,
+                          anime: item.anime,
+                          price: item.price,
+                          quantity: item.quantity,
+                          detail: item.detail,
+                          photo: item.photo,
+                          category: item.category
+                        }
+                      }}
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-black waves-effect"
+                      >
+                        Check
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
         <br />
         <Pagination
@@ -147,6 +184,71 @@ function App() {
           totalItems={items.length}
           paginate={paginate}
         />
+      </div>
+
+      <div
+        class="modal fade"
+        id="modalCart"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">
+                Your cart
+              </h4>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Product name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cart.map(item => (
+                    <tr>
+                      <th scope="row">{item.id}</th>
+                      <td>{item.name}</td>
+                      <td></td>
+                      <td>${+item.price}</td>
+                      <td>
+                        <a>
+                          <i class="fas fa-times"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                  <tr class="total">
+                    <th scope="row"></th>
+                    <td>
+                      <strong>Total price</strong>
+                    </td>
+                    <td></td>
+                    <td>${totalPrice}</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
       </div>
     </Fragment>
   );

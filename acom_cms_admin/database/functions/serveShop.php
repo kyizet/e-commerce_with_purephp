@@ -12,7 +12,10 @@ if ($_POST['category'] === 'All') {
             $sql_fetchItems = "select * from `$cat`";
             $result_fetchItems = mysqli_query($connection, $sql_fetchItems);
             for ($j; $j < mysqli_num_rows($result_fetchItems); $j++) {
-                echo ($j > 0 ? ',' : '') . json_encode(mysqli_fetch_object($result_fetchItems));
+                $item = mysqli_fetch_object($result_fetchItems);
+                $item->category = $cat;
+                $item = json_encode($item);
+                echo ($j > 0 ? ',' : '') . $item;
             }
             $j = 1;
         }
@@ -24,7 +27,10 @@ if ($_POST['category'] === 'All') {
     $result = mysqli_query($connection, $sql);
     echo "[";
     for ($i = 0; $i < mysqli_num_rows($result); $i++) {
-        echo ($i > 0 ? ',' : '') . json_encode(mysqli_fetch_object($result));
+        $item = mysqli_fetch_object($result);
+        $item->category = $category;
+        $item = json_encode($item);
+        echo ($i > 0 ? ',' : '') . $item;
     }
     echo "]";
 }

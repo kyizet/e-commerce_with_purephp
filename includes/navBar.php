@@ -1,9 +1,32 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
 include($root . "/e-commerce_with_purephp/acom_cms_admin/database/connection.php");
+include($root . "/e-commerce_with_purephp/includes/handleGoogle/config.php");
 
 session_start();
+
+
+$login_button = '';
+if (isset($_GET["code"])) {
+  $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+  if (!isset($token['error'])) {
+    $google_client->setAccessToken($token['access_token']);
+    $_SESSION['access_token'] = $token['access_token'];
+    $google_service = new Google_Service_Oauth2($google_client);
+    $data = $google_service->userinfo->get();
+    if (!empty($data['picture'])) {
+      $_SESSION['user_image'] = $data['picture'];
+    }
+  }
+}
+
+if (!isset($_SESSION['access_token'])) {
+  $login_button = '<a href="' . $google_client->createAuthUrl() . '">
+ <button class="btn btn-black white-text"><i class="fab fa-google fa-2x"></i>&nbsp;&nbsp;Login with Google Instead</button></a>';
+}
+
 ?>
+
 <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg fixed-top black white-text">
   <a class="navbar-brand" href="/e-commerce_with_purephp/"><img src="/e-commerce_with_purephp/assets/images/logo/acom-logo-white.png" width="30px" height="30px" alt="invalid" /></a>
@@ -31,7 +54,7 @@ session_start();
 
 
       <?php
-      if (empty($_SESSION['username'])) {
+      if (empty($_SESSION['username']) && !$login_button == '') {
 
       ?>
         <li class="nav-item dropdown">
@@ -83,10 +106,14 @@ session_start();
                   <input type="password" id="modalLRInput11" class="form-control form-control-sm validate" autocomplete="on" name="">
                   <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
                 </div>
-                <div class="text-center mt-2 ">
-                  <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+
+
+                <div class="text-center form-sm mt-2">
+                  <button class="btn btn-black">Login<i class="fas fa-sign-in ml-1"></i></button>
                 </div>
+
               </div>
+
               <!--Footer-->
               <?php if (isset($_SESSION['loginError'])) {   ?>
                 <div class="alert alert-danger" role="alert">
@@ -96,6 +123,14 @@ session_start();
               unset($_SESSION['loginError']);
               ?>
             </form>
+            <div class="text-center form-sm mt-2">
+              <?php
+              echo $login_button;
+              ?>
+            </div>
+            <div class="mt-4">
+
+            </div>
 
           </div>
           <!--/.Panel 7-->
@@ -157,7 +192,7 @@ session_start();
                 unset($_SESSION['error']);
                 ?>
                 <div class="text-center form-sm mt-2">
-                  <button class="btn btn-info black">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                  <button class="btn btn-black white-text">Sign up <i class="fas fa-sign-in ml-1"></i></button>
                 </div>
 
               </div>
@@ -178,29 +213,38 @@ session_start();
 
 
 
-
 <!-- Logged in side ------------------------------------------------------------------------------------------------------------- Logged in side -------------------------------->
 <?php
       } else {
-        $username = $_SESSION['username'];
-        if ($connection) {
-          $sql = "select * from customer where customer_username = '$username'";
-          $result = mysqli_query($connection, $sql);
-          $data = mysqli_fetch_row($result);
-        }
+        if (isset($_SESSION['user_image'])) {
 ?>
-  <li class="nav-item">
-    <a class="nav-link waves-effect waves-light"><i class="fas fa-shopping-cart"></i>
-    </a>
-  </li>
-  &nbsp; &nbsp;
   <li class="nav-item dropdown">
-        <?php if(empty($data[8])){ ?>
-          <a class="nav-link waves-effect waves-light" style="cursor: pointer;" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle" ></i>  
-    </a>
-          <?php } else { ?>
-    <img src="/e-commerce_with_purephp/assets/images/userprofiles/<?php echo $data[8]; ?>" class="rounded-circle float-right" alt="invalid" width="30px" height="30px" style="cursor: pointer;" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       <?php } ?>
+    <img src="<?php echo $_SESSION["user_image"]; ?>" class="rounded-circle float-right" alt="invalid" width="30px" height="30px" style="cursor: pointer;" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown-menu dropdown-menu-left dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+      <a class="dropdown-item" href="/e-commerce_with_purephp/includes/handleGoogle/logout.php"><i class="fas fa-power-off">Logout</i></a>
+    </div>
+  </li>
+  </ul>
+  </div>
+  </nav>
+<?php
+        } else {
+
+          $username = $_SESSION['username'];
+          if ($connection) {
+            $sql = "select * from customer where customer_username = '$username'";
+            $result = mysqli_query($connection, $sql);
+            $data = mysqli_fetch_row($result);
+          }
+?>
+
+  <li class="nav-item dropdown">
+    <?php if (empty($data[8])) { ?>
+      <a class="nav-link waves-effect waves-light" style="cursor: pointer;" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i>
+      </a>
+    <?php } else { ?>
+      <img src="/e-commerce_with_purephp/assets/images/userprofiles/<?php echo $data[8]; ?>" class="rounded-circle float-right" alt="invalid" width="30px" height="30px" style="cursor: pointer;" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <?php } ?>
     <div class="dropdown-menu dropdown-menu-left dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
       <a class="dropdown-item data-toggle=" data-toggle="modal" data-target="#editForm" aria-haspopup="true" aria-expanded="false"><i class=" fas fa-edit">Edit Account</i></a>
       <a class="dropdown-item" href="/e-commerce_with_purephp/includes/logout.php"><i class="fas fa-power-off">Logout</i></a>
@@ -288,7 +332,7 @@ session_start();
                   <br><br>
 
                   <div class="text-center mt-2">
-                    <button class="btn btn-info black white-text">Update<i class="fas fa-sign-in ml-1"></i></button>
+                    <button class="btn btn-black white-text">Update<i class="fas fa-sign-in ml-1"></i></button>
                   </div>
                 </div>
                 <!--Footer-->
@@ -314,4 +358,5 @@ session_start();
 
   <!--/.Navbar -->
 <?php }
+      }
 ?>

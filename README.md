@@ -22,5 +22,4 @@ This is an E-commerce website that sells anime-related products such as figures,
 * The root folder's name should be "/e-commerce_with_purephp"
 * Create an admin account manually
 * If the table for Admin and Customer are not automatically generated, the column names can be found within addDatabase.php
-* To get the best result of the CMS system, all the tables MUST BE CREATED in small letters (Some are default-small)
-* Photos uploaded should be in PNG or some of the features will not work, plus the items will only need PNGs
+* Photos uploaded should be in PNG or some of the features will not work, plus the items will work better with PNGs

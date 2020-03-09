@@ -360,11 +360,10 @@
                                     <img src="/e-commerce_with_purephp/assets/images/testimonies/paul.jpg" class="rounded-circle z-depth-1" width="250px" height="250px">
                                 </div>
                                 <!--Content-->
-                                <h4 class="font-weight-bold dark-grey-text mt-4">Anna Deynah</h4>
-                                <h6 class="font-weight-bold blue-text my-3">Web Designer</h6>
+                                <h4 class="font-weight-bold dark-grey-text mt-4">တုံးတုံးပြောင်ပြောင်</h4>
+                                <h6 class="font-weight-bold blue-text my-3">ရှင်းရှင်းလေးကြိုက်သူ</h6>
                                 <p class="font-weight-normal dark-grey-text">
-                                    <i class="fas fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                                    eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
+                                    <i class="fas fa-quote-left pr-2"></i>အရမ်းရှင်းပါတယ် Website ကြီးက အရမ်းရှင်းလို့ အရမ်းကြိုက်ရပါတယ် ဒါနဲ့ အပြင်မှာ ပုံထဲကထက်ပို ပြောင်ပြီး ပိုချောပါတယ်</p>
                                 <!--Review-->
                             </div>
 
@@ -380,11 +379,11 @@
                                     <img src="/e-commerce_with_purephp/assets/images/testimonies/hlm.jpg" class="rounded-circle z-depth-1" width="250px" height="250px">
                                 </div>
                                 <!--Content-->
-                                <h4 class="font-weight-bold dark-grey-text mt-4">John Doe</h4>
-                                <h6 class="font-weight-bold blue-text my-3">Web Developer</h6>
+                                <h4 class="font-weight-bold dark-grey-text mt-4">ထူးလည်းမူး မထူးလည်းမူး အမြဲမူး</h4>
+                                <h6 class="font-weight-bold blue-text my-3">ညီမလေးစောင့်သူ</h6>
                                 <p class="font-weight-normal dark-grey-text">
-                                    <i class="fas fa-quote-left pr-2"></i>Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                                    corporis suscipit laboriosam, nisi ut aliquid commodi.</p>
+                                    <i class="fas fa-quote-left pr-2"></i>Quality အကောင်းဆုံးတွေပါပဲ ... ညီမလေးကို ဒီကဝယ်ပြီးသွားပေးတာ
+                                    ညီမလေးကကြိုက်တော့ အရမ်းပျော်ရပါတယ် ... ခုထိတော့ အဖက်မလုပ်ဘူးပေါ့ အဟင့်</p>
                                 <!--Review-->
                             </div>
 
